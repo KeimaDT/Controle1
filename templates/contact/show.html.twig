@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Fiche article{% endblock %}
+
+{% block body %}
+
+    <h1 class="mb-3">Fiche Contact n°{{contact.id}}</h1>
+
+    <div class="row">
+        
+            <div class="col-md-4">
+                <div class="card bg-light mb-3">
+                    <div class="card-hearticleer text-center">
+                        {{ contact.libelle }} article, <strong> {{contact.prix}}&euro; pour lire</strong> <br>
+                        <small> Pas encore lu</small>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">{{contact.description}}</p>
+                        <p>{{contact.prix}}euros</p>
+                    </div>
+                    <a href="#">
+                    <img src="{{contact.image}}" alt="Image de l'article" style="height : 200px; width: 100%; display: block">
+                    </a>
+                    
+                </div>
+            </div>
+        
+    </div>
+
+{% endblock %}

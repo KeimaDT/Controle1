@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1 class="mb-3">Liste des contacts</h1>
+
+    <div class="row">
+        {% for contact in contacts %}
+            <div class="col-md-4">
+                <div class="card bg-light mb-3">
+                    <div class="card-hearticleer text-center">
+                        {{ contact.nom }}  <br>
+                        
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock %}
